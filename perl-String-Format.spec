@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	String
-%define	pnam	Format
+%define		pdir	String
+%define		pnam	Format
 Summary:	String::Format - sprintf-like string formatting capabilities
 Summary(pl):	String::Format - mo¿liwo¶ci formatowania podobne do sprintf
 Name:		perl-String-Format
