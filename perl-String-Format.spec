@@ -39,7 +39,7 @@ index_format z mutta i powi±zanymi dyrektywami (wiêcej pod adresem
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %{!?_without_tests:%{__make} test}
