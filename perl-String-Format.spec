@@ -12,8 +12,9 @@ Version:	1.14
 Release:	1
 License:	GPL v2
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/String/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	8301545d15baaddfd5e2e4296b48352b
+URL:		http://search.cpan.org/dist/String-Format/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -56,5 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_vendorlib}/%{pdir}/*.pm
+%doc Changes
+%{perl_vendorlib}/String/*.pm
 %{_mandir}/man3/*
