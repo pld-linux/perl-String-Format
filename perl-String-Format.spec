@@ -6,7 +6,7 @@
 %define		pdir	String
 %define		pnam	Format
 Summary:	String::Format - sprintf-like string formatting capabilities
-Summary(pl):	String::Format - mo¿liwo¶ci formatowania podobne do sprintf
+Summary(pl.UTF-8):   String::Format - moÅ¼liwoÅ›ci formatowania podobne do sprintf
 Name:		perl-String-Format
 Version:	1.14
 Release:	1
@@ -28,12 +28,12 @@ of a query need to be formatted in a particular way.  It was
 inspired by mutt's index_format and related directives (see
 <http://www.mutt.org/doc/manual/manual-6.html#index_format>).
 
-%description -l pl
-Modu³ String::Format pozwala na definiowanie dowolnych sekwencji
-formatuj±cych w stylu printf. Jest najbardziej u¿yteczny w plikach
-konfiguracyjnych i narzêdziach raportuj±cych, gdzie wyniki zapytañ
-musz± byæ sformatowane w okre¶lony sposób. Jest zainspirowany
-index_format z mutta i powi±zanymi dyrektywami (wiêcej pod adresem
+%description -l pl.UTF-8
+ModuÅ‚ String::Format pozwala na definiowanie dowolnych sekwencji
+formatujÄ…cych w stylu printf. Jest najbardziej uÅ¼yteczny w plikach
+konfiguracyjnych i narzÄ™dziach raportujÄ…cych, gdzie wyniki zapytaÅ„
+muszÄ… byÄ‡ sformatowane w okreÅ›lony sposÃ³b. Jest zainspirowany
+index_format z mutta i powiÄ…zanymi dyrektywami (wiÄ™cej pod adresem
 <http://www.mutt.org/doc/manual/manual-6.html#index_format>).
 
 %prep
