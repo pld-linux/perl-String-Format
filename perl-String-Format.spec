@@ -6,7 +6,7 @@
 %define		pdir	String
 %define		pnam	Format
 Summary:	String::Format - sprintf-like string formatting capabilities
-Summary(pl.UTF-8):   String::Format - możliwości formatowania podobne do sprintf
+Summary(pl.UTF-8):	String::Format - możliwości formatowania podobne do sprintf
 Name:		perl-String-Format
 Version:	1.14
 Release:	1
