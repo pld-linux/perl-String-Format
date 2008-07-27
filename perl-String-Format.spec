@@ -9,7 +9,7 @@ Summary:	String::Format - sprintf-like string formatting capabilities
 Summary(pl.UTF-8):	String::Format - możliwości formatowania podobne do sprintf
 Name:		perl-String-Format
 Version:	1.14
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/String/%{pdir}-%{pnam}-%{version}.tar.gz
