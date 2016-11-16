@@ -8,12 +8,12 @@
 Summary:	String::Format - sprintf-like string formatting capabilities
 Summary(pl.UTF-8):	String::Format - możliwości formatowania podobne do sprintf
 Name:		perl-String-Format
-Version:	1.16
+Version:	1.17
 Release:	1
 License:	GPL v2
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/String/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	4c4214b891648bbbf74b3ecf5c8207d8
+# Source0-md5:	5635b975740122bab326ff2186cc97fb
 URL:		http://search.cpan.org/dist/String-Format/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -58,5 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%{perl_vendorlib}/String/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/String/Format.pm
+%{_mandir}/man3/String::Format.3pm*
