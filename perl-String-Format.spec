@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	String
 %define		pnam	Format
 Summary:	String::Format - sprintf-like string formatting capabilities
