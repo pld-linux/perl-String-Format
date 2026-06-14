@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	String
 %define		pnam	Format
@@ -11,20 +11,25 @@ Version:	1.18
 Release:	2
 License:	GPL v2
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/String/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/String/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	64174b4fac230228cadfa2be4410ef1a
-URL:		http://search.cpan.org/dist/String-Format/
+URL:		https://metacpan.org/dist/String-Format
+BuildRequires:	perl-ExtUtils-MakeMaker
 BuildRequires:	perl-devel >= 1:5.8.0
+%if %{with tests}
+BuildRequires:	perl-Test-Simple
+%endif
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-String::Format lets you define arbitrary printf-like format
-sequences to be expanded.  This module would be most useful
-in configuration files and reporting tools, where the results
-of a query need to be formatted in a particular way.  It was
-inspired by mutt's index_format and related directives (see
+String::Format lets you define arbitrary printf-like format sequences
+to be expanded. This module would be most useful in configuration
+files and reporting tools, where the results of a query need to be
+formatted in a particular way. It was inspired by mutt's index_format
+and related directives (see
 <http://www.mutt.org/doc/manual/manual-6.html#index_format>).
 
 %description -l pl.UTF-8
@@ -41,9 +46,12 @@ index_format z mutta i powiązanymi dyrektywami (więcej pod adresem
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
+
 %{__make}
 
-%{?with_tests:%{__make} test}
+%if %{with tests}
+%{__make} test
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
